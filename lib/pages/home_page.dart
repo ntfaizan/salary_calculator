@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final grossSalaryController = TextEditingController();
   final taxController = TextEditingController();
-  double? netSalary;
+  double netSalary = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             const SizedBox(height: 20),
-            if (netSalary != null) Text('Net Salary: $netSalary'),
+            if (netSalary != 0) Text('Net Salary: $netSalary'),
           ],
         ),
       ),
